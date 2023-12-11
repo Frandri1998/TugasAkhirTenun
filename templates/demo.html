@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NENUN - Deteksi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css')}}" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+  </head>
+  <style>
+    .video-container{
+      justify-content: center;
+      text-align: center;
+      height: 150%;
+      width: 150%;
+    }
+  </style>
+  <body>
+    <div class="App">
+      <header class="App-header">
+        <p><u> Deteksi Asal Tenun NTT </u></p>
+        <!-- <div className="pre_img">
+          <span><img id="imagebox" src="" /></span>
+        </div> -->
+        <!-- <video width="320" height="240" controls>
+          <source src="/static/video_1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+        <!-- <button name="cam" class="button" id="opencam">Video Cam</button>
+        <br/>
+        <hr class="line" />
+        <form>
+          <input
+            id="imageinput"
+            type="file"
+            name="image"
+            onchange="readUrl(this)"
+          />
+        </form>
+        <button name="send"  class="button" id="sendbutton">Send</button>
+        <br/>
+        <div id="link">
+          <a href="" id="download" download>Download</a>
+        </div> -->
+        <div class="video-container">
+            <img src="{{ url_for('video') }}"></img>
+        </div>
+        <div>
+          <a class="button" href="{{url_for('index')}}">Kembali</a>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
